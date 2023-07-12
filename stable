@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Helm Stable | charts</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Helm Stable" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="⚠️(OBSOLETE) Curated applications for Kubernetes" />
+<meta property="og:description" content="⚠️(OBSOLETE) Curated applications for Kubernetes" />
+<link rel="canonical" href="https://charts.helm.sh/stable/" />
+<meta property="og:url" content="https://charts.helm.sh/stable/" />
+<meta property="og:site_name" content="charts" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Helm Stable","url":"https://charts.helm.sh/stable/","description":"⚠️(OBSOLETE) Curated applications for Kubernetes","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=ec7ff964b33661a7d11de5c5847a0baae1fefbac">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://charts.helm.sh/">charts</a></h1>
+      
+
+      <h1 id="helm-stable">Helm Stable</h1>
+
+<p><a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License" /></a></p>
+
+<h2 id="usage">Usage</h2>
+
+<p><a href="https://helm.sh">Helm</a> must be installed to use the charts.
+Please refer to Helm’s <a href="https://helm.sh/docs/">documentation</a> to get started.</p>
+
+<p>Once Helm is set up properly, add the repo as follows:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">helm repo add stable https://charts.helm.sh/stable
+</span></code></pre></div></div>
+
+<p>You can then run <code class="language-plaintext highlighter-rouge">helm search repo stable</code> to see the charts, or browse on CNCF <a href="https://artifacthub.io/packages/search?page=1&amp;repo=helm-stable">Artifact Hub</a>.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<!-- Keep full URL links to repo files because this README syncs from master to gh-pages.  -->
+<p>⚠️ Note the <a href="https://github.com/helm/charts/blob/master/README.md#status-of-the-project">status of the project</a>, <a href="https://github.com/helm/charts/blob/master/README.md#deprecation-timeline">deprecation timeline</a>, and the ongoing effort to <a href="https://github.com/helm/charts/issues/21103">relocate charts to new repos</a>.</p>
+
+<!-- Keep full URL links to repo files because this README syncs from master to gh-pages.  -->
+<p>We’d love to have you contribute! Please refer to our <a href="https://github.com/helm/charts/blob/master/CONTRIBUTING.md">contribution guidelines</a> for details.</p>
+
+<h2 id="license">License</h2>
+
+<!-- Keep full URL links to repo files because this README syncs from master to gh-pages.  -->
+<p><a href="https://github.com/helm/charts/blob/master/LICENSE">Apache 2.0 License</a>.</p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/helm/charts/edit/gh-pages/stable/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

@@ -1,0 +1,116 @@
+config:
+  ruler:
+    enable_api: true
+    rule_path: /rules
+  alertmanager:
+    enable_api: true
+    data_dir: /data
+
+  auth_enabled: true
+  api:
+    prometheus_http_prefix: '/prometheus'
+    response_compression_enabled: true
+  ingester:
+    lifecycler:
+      join_after: 0s
+      final_sleep: 0s
+      num_tokens: 512
+      ring:
+        replication_factor: 3
+        kvstore:
+          store: consul
+          prefix: 'collectors/'
+          consul:
+            host: 'consul-server:8500'
+            http_client_timeout: '20s'
+            consistent_reads: true
+  ruler_storage:
+    backend: s3
+    s3:
+      bucket_name: cortex-buc
+      access_key_id: AKIAR3ZHP7NNFIFRNVPJ
+      secret_access_key: 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
+      endpoint: s3.us-east-1.amazonaws.com
+      region: us-east-1
+  alertmanager_storage:
+    backend: s3
+    s3:
+      bucket_name: cortex-buc
+      access_key_id: AKIAR3ZHP7NNFIFRNVPJ
+      secret_access_key: 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
+      endpoint: s3.us-east-1.amazonaws.com
+      region: us-east-1
+
+  storage:
+    engine: blocks
+  blocks_storage:
+    backend: s3
+    s3:
+      bucket_name: cortex-buc
+      access_key_id: AKIAR3ZHP7NNFIFRNVPJ
+      secret_access_key: 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
+      endpoint: s3.us-east-1.amazonaws.com
+      region: us-east-1
+
+    bucket_store:
+      sync_dir: "/data"
+    tsdb:
+      dir: "/data"
+
+alertmanager:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
+
+distributor:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
+
+ingester:
+  autoforget_unhealthy: true
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
+
+ruler:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
+
+querier:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
+
+query_frontend:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
+
+nginx:
+  service:
+    type: LoadBalancer
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
+
+store_gateway:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
+
+compactor:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prom
